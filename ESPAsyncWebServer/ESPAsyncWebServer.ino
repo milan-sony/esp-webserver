@@ -24,7 +24,7 @@ AsyncWebServer server(80);
 //Page not found function
 void notFound(AsyncWebServerRequest *request)
 {
-  request->send(404, "text/plain", "Page Not found");
+  request->send(404, "text/plain", "Page Not Found");
 }
 
 void setup() {
@@ -43,9 +43,21 @@ void setup() {
   //Print the softAP IP Address
   Serial.println(WiFi.softAPIP());
 
+  //Define mDNS
+  //Multicast DNS (mDNS) is a protocol that resolves hostnames to IP addresses in small networks without a local name server
+  // if (MDNS.begin("esp")) {
+  //   Serial.println("MDNS responder started");
+  // }
+
   server.on("/", [](AsyncWebServerRequest * request)
   { 
     String message = "hello world"; 
+    request->send(200, "text/plain", message);
+  });
+
+  server.on("/page1",HTTP_GET, [](AsyncWebServerRequest * request)
+  { 
+    String message = "Page One"; 
     request->send(200, "text/plain", message);
   });
 
