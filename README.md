@@ -15,3 +15,4 @@ Here we make an HTML page then deploy that HTML page on the web server running o
 
 <a href="https://developerinsider.co/difference-between-http-and-http-2-0-websocket/">Read the diff b/w http and websocket</a>
 
+<a href="https://www.w3schools.com/js/js_json_intro.asp">JSON</a>
