@@ -9,6 +9,8 @@ Here we make an HTML page then deploy that HTML page on the web server running o
   
 - In websockets the <a href="https://github.com/Links2004/arduinoWebSockets">WebSocketsServer</a> library is used and send's HTML page to clients connected to the ESP web server. `connection.send("LED one is ON");` is used to sent data to the server. `websockets.onEvent(webSocketEvent);` receive's the data from the client.
 
+- In websockets_JSON instead of sending the data as plain string, we sent the data in the JSON form then deserialize the JSON data using `deserializeJson()` and save's all the JSON data in the object created from `DynamicJsonDocument`
+
 ### Read Documents
 
 <a href="https://randomnerdtutorials.com/esp32-access-point-ap-web-server/">Read about Access Point</a>
