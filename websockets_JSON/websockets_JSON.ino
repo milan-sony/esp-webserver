@@ -34,7 +34,6 @@ AsyncWebServer server(80);
 //Initilizing WebSocketsServer at port 81
 WebSocketsServer websockets(81);
 
-
 //Write your webpage here (Raw String Literal)
 /*
 Here we are storing the webpage in the program memory, the data is stored inside the flash memory
